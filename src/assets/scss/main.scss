@@ -1,0 +1,37 @@
+@import '@/assets/fonts/fonts.scss';
+@import './mixins';
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #403C3B;
+}
+
+.container {
+    margin: 0 15px;
+    max-width: 1440px;
+
+    @include screen-xs-up {
+        margin: 0 20px;
+    }
+    
+    @include screen-md-up {
+        margin: 0 25px;
+    }
+    
+    @include screen-lg-up {
+        margin: 0 30px;
+    }
+    
+    @include screen-xl-up {
+        margin: 0 40px;
+    }
+    
+    @include screen-2xl-up {
+        margin: 0 80px;
+    }
+
+    @include screen-3xl-up {
+        margin: auto;
+    }
+}

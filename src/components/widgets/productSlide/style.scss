@@ -1,0 +1,56 @@
+.product__slide {
+    padding: 36px 0px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include reset;
+    
+
+    @include screen-lg-up {
+        padding: 50px 0px;
+    }
+    
+    &-title {
+        padding-bottom: 36px;
+
+        text-transform: uppercase;
+
+        @include screen-lg-up {
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            height: 22px;
+        
+            padding-left: 10px;
+            
+            font-weight: 600;
+            font-size: 20px;
+            
+
+            color: #fff;
+            border-left: 4px solid $baseGreen;
+
+            @include screen-lg-up {
+                font-size: 32px;
+                height: 39px;
+            }
+        }
+    }
+
+    &-content {
+
+    }
+}
+
+//splide custom style
+
+.product__slide {
+    .splide__slide {
+        width: auto !important;
+        
+        margin: 0 7.5px 0 7.5px;
+    }
+}

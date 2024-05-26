@@ -1,0 +1,29 @@
+{
+  "name": "restoran",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest --dom"
+  },
+  "dependencies": {
+    "@splidejs/vue-splide": "^0.6.12",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^14.10.1",
+    "node-sass": "^9.0.0",
+    "sass": "^1.76.0",
+    "sass-loader": "^14.2.1",
+    "vite": "^5.2.0",
+    "vite-svg-loader": "^5.1.0",
+    "vitest": "^1.6.0"
+  }
+}

@@ -1,0 +1,169 @@
+.our__cafe {
+    position: relative;
+    display: none;
+
+    background-image: url('@/assets/images/our-cafe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+
+    @include screen-lg-up {
+       display: block;
+    }
+
+    @include reset;
+
+    &-wrap {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        box-sizing: border-box;
+        padding: 70px;
+        z-index: 2;
+
+        @include screen-lg-up {
+            gap: 80px;
+        }
+
+        @include screen-xl-up {
+            gap: 100px;
+        }
+
+        @include screen-2xl-up {
+            gap: 160px;
+        }        
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(to right, rgb(36, 32, 33, 1) 50%, rgba(36, 32, 33, 0.1) 90%);
+
+        @include screen-xl-up {
+            background: linear-gradient(to right, rgb(36, 32, 33, 1) 30%, rgba(36, 32, 33, 0.1) 90%);
+        }
+    }
+}
+
+.our__cafe-content {
+
+    @include screen-xl-up {
+        width: 400px;
+    }
+
+    @include screen-xl-up {
+        width: 463px;
+    }
+
+    @include screen-2xl-up {
+        width: 563px;
+    }
+
+    &__title {
+        color: #fff;
+
+        font-weight: 600;
+        padding-bottom: 26px;
+        font-size: 32px;
+
+        @include screen-lg-up {
+            font-size: 28px;
+        }
+
+        @include screen-xl-up {
+            font-size: 30px;
+        }
+
+        @include screen-2xl-up {
+            font-size: 32px;
+        }
+    }
+
+    &__description {
+        color: #CFCFCF;
+        font-weight: 400;
+
+        @include screen-lg-up {
+            font-size: 18px;
+            padding-bottom: 50px;
+        }
+
+        @include screen-2xl-up {
+            font-size: 20px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        color: #fff;
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        cursor: pointer;
+
+        width: 223px;
+        height: 59px;
+    }
+}
+
+.our__cafe-widget {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+
+    @include screen-2xl-up {
+       
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        background-color: rgba(80, 75, 74, 0.9);
+
+
+        @include screen-lg-up {
+            width: 150px;
+            height: 151px;
+        }
+
+        @include screen-xl-up {
+            width: 208px;
+            height: 207px;
+        }
+
+        @include screen-2xl-up {
+            width: 228px;
+            height: 227px;
+        }
+    }
+
+    &__icon {
+        padding-bottom: 26px;
+    }
+
+    &__text {
+        text-align: center;
+        color: #fff;
+        font-weight: 400;
+    }
+}

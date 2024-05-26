@@ -1,0 +1,66 @@
+@forward './_variables.scss';
+
+@mixin screen-min-up {
+    @media(max-width: $screen-min) {
+        @content;
+    }
+}
+
+@mixin screen-xxs-up {
+    @media(min-width: $screen-xxs) {
+        @content;
+    }
+}
+
+@mixin screen-xs-up {
+    @media(min-width: $screen-xs) {
+        @content;
+    }
+}
+
+@mixin screen-sm-up {
+    @media(min-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin screen-md-up {
+    @media(min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin screen-lg-up {
+    @media(min-width: $screen-lg) {
+        @content;
+    }
+}
+
+@mixin screen-xl-up {
+    @media(min-width: $screen-xl) {
+        @content;
+    }
+}
+
+@mixin screen-2xl-up {
+    @media(min-width: $screen-2xl) {
+        @content;
+    }
+}
+
+@mixin screen-3xl-up {
+    @media(min-width: $screen-3xl) {
+        @content;
+    }
+}
+
+@mixin reset {
+    font-family: Gilroy;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    box-sizing: border-box;
+}

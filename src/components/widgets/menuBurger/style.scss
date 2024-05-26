@@ -1,0 +1,69 @@
+.menu__burger {
+    position: relative;
+    width: 25px;
+
+    &-toggle {
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    &-btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        position: absolute;
+
+        height: 25px;
+        width: 25px;
+
+        top: 0;
+        left: 0;
+        
+        cursor: pointer;
+        z-index: 1;
+
+        span, span::before, span::after {
+            display: block;
+            position: absolute;
+
+            width: 100%;
+            height: 3px;
+            border-radius: 50px;
+
+            background-color: $baseGreen;
+            transition-duration: .6s;
+        }
+
+        span {
+            &::before {
+                content: "";
+                top: -7px;
+            }
+
+            &::after {
+                content: "";
+                top: 7px;
+            }
+        }
+    }
+}
+
+/* clicked */
+#menu__burger-toggle:checked ~ .menu__burger-btn span {
+    transform: rotate(45deg);
+}
+
+#menu__burger-toggle:checked ~ .menu__burger-btn span::before {
+    top: 0;
+    transform: rotate(0);
+    opacity: 0;
+}
+
+#menu__burger-toggle:checked ~ .menu__burger-btn span::after {
+    top: 0;
+    transform: rotate(90deg);
+}

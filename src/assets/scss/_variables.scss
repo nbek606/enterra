@@ -1,0 +1,51 @@
+$screen-min: 321px;
+$screen-xxs: 376px;
+$screen-xs: 480px;
+$screen-sm: 640px;
+$screen-md: 767px;
+$screen-lg: 991px;
+$screen-xl: 1200px;
+$screen-2xl: 1440px;
+$screen-3xl: 1650px;
+$baseGreen: #65906C;
+$ligthGreen: #72A479;
+$bgColor: #403C3B;
+
+/**
+
+@include screen-min-up {
+
+}
+
+@include screen-xxs-up {
+
+}
+
+@include screen-xs-up {
+
+}
+
+@include screen-sm-up {
+
+}
+
+@include screen-md-up {
+
+}
+
+@include screen-lg-up {
+
+}
+
+@include screen-xl-up {
+
+}
+
+@include screen-2xl-up {
+
+}
+
+@include screen-3xl-up {
+
+}
+**/
