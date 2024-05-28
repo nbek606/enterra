@@ -1,0 +1,63 @@
+.banner {
+    background-image: url('@/assets/images/banner.jpg');
+    background-size: cover;
+    background-position: 55% 100%;
+    position: relative;
+    
+    
+    min-width: 292px;
+    max-width: 1097px;
+
+    height: clamp(16.438rem, 10.3846rem + 30.2671vw, 37.625rem);
+
+    margin: auto 14px;
+    margin-top: 20px;
+
+    border-radius: 10px;
+
+    @include screen-xs-up {
+        background-position: 100%;
+    }
+
+    @include screen-lg-up {
+        border-radius: 20px;
+    }
+
+    @include reset;
+    
+
+    &__sticker {
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $ligthGreen;
+        
+        width: 205px;
+        height: 37px;
+
+        font-weight: 700;
+
+        bottom: -10px;
+        left: 11px;
+
+        color: $white;
+        font-size: 18px;
+        border-radius: 10px 20px 0px 10px;
+
+        @include screen-lg-up {
+
+            border-radius: 20px 50px 0px 20px;
+
+            font-size:35px;
+
+            width: 392px;
+            height: 70px;
+
+            top: -34px;
+            left: -17px;
+        }
+    }
+}

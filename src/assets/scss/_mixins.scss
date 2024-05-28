@@ -1,7 +1,7 @@
 @forward './_variables.scss';
 
 @mixin screen-min-up {
-    @media(max-width: $screen-min) {
+    @media(min-width: $screen-min) {
         @content;
     }
 }

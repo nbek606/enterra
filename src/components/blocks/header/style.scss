@@ -1,148 +1,80 @@
 .header {
-    width: 100%;
-    background-color: $bgColor;
-    padding: 12px 0px;
+    padding-top: 20px;
 
+    @include screen-lg-up {
+        padding-top: 0;
+    }
 
     &__wrap {
-        display: grid;
-        justify-content: space-between;
-    
-        grid-template-areas: 
-            'menu logo cart'
-            'search search search';
-
-        @include screen-md-up {
-            grid-template-areas: 
-                'logo contacts cart'
-                'search search search';
-        }
-
-        @include screen-lg-up {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-}
-
-.header__menu {
-    grid-area: menu;
-    display: flex;
-    align-items: center;
-
-    &-mobile {
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: space-between;
 
-        @include screen-md-up {
+        @include screen-lg-up {
+            align-items: start;
+        }
+    }
+
+    &__logo {
+        @include screen-lg-up {
+            padding-top: 21px;
+        }
+    }
+
+    &__list {
+        display: none;
+        padding: 52px;
+
+        @include screen-lg-up {
+            display: block;
+        }
+    }
+
+    &__burger {
+        @include screen-lg-up {
             display: none;
         }
     }
 
-    &-burger {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &-text {
-        display: block;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 600;
-        padding-top: 8px;
-        color: #fff;
-
-        @include reset;
-    }
-}
-
-.header__logo {
-    grid-area: logo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-weight: 600;
-    font-size: 25px;
-    color: #fff;
-    letter-spacing: 5px;
-
-    text-transform: uppercase;
-
     @include reset;
 }
 
-.header__search {
-    grid-area: search;
-    margin-top: 10px;
+.header__mobile-toggle {
+    position: absolute;
+
+    width: 100%;
+
+    background-color: #fff;
+    
+    top: -100%;
+    left: 0;
+    
+    padding: 28px 35px 0 35px;
+
+    z-index: 10;
+
+    box-shadow: 4px 4px 30px 0px #00000066;
+    border-radius:0 0 30px 30px;
+    padding-bottom: 48px;
+    transition: all 0.6s ease-in-out 0.1s; 
 
     @include screen-lg-up {
-        margin-top: 0;
-        width: 555px;
-    }
-
-    @include screen-lg-up {
-        padding-left: 72px;
-    }
-}
-
-.header__contacts {
-    grid-area: contacts;
-    display: none;
-
-    @include screen-lg-up {
-        display: grid;
-        height: 32px;
-        width: 40%;
-        justify-content: flex-start;
-        padding-left: 30px;
+        display: none;
     }
     
-    @include screen-2xl-up {
-        width: 30%;
-    }
-    
-    grid-template-areas: 
-        'icon title'
-        'icon value';
-
-    &-icon {
-        grid-area: icon;
+    &__logo {
         display: flex;
         align-items: center;
-        justify-content: center;
-
-        width: 32px;
-        height: 32px;
-        
-        margin-right: 10px;
-        border-radius: 32px;
-        background: linear-gradient(to right, $baseGreen, $ligthGreen);
+        justify-content: space-between;
     }
 
-    &-title {
-        grid-area: title;
-
-        color:#CFCFCF;
-        font-size: 12px;
-        font-weight: 400;
+    &__active {
+        top: 0;
     }
 
-    &-value {
-        grid-area: value;
-
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
+    &__list {
+        padding-top: 34px;
     }
 
     @include reset;
-}
-
-.header__cart {
-    grid-area: cart;
 }

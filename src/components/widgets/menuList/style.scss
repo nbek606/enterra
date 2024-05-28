@@ -1,0 +1,17 @@
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 100%;
+
+    @include  screen-lg-up {
+        flex-direction: row;
+        gap: 45px;
+    }
+
+    &-item {
+        font-size: 14px;
+        color: $black;
+    }
+}

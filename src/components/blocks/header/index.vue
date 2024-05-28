@@ -1,78 +1,64 @@
 <template lang="">
-    <div class="header">
+    <header class="header">
         <div class="header__wrap container">
-            <div 
-                class="header__menu header__menu-mobile"
-            >
-                <span class="header__menu-burger">
-                    <MenuBurger 
-                        @clicked="isShowLeftMenu = !isShowLeftMenu"
-                    />
-                </span>
-                <span class="header__menu-text">
-                    меню
-                </span>
+            <div class="header__logo">
+                <Logo />
             </div>
             
-            <div class="header__logo">
-                LOGOS
+            <!--desktop list-->
+            <div class="header__list">
+                <MenuList />
             </div>
 
-            <div class="header__search">
-                <HeaderSearch />
+            <!---mobile burger-->
+            <div class="header__burger">
+                <Burger 
+                    @clicked="menuToggle = !menuToggle"
+                />
             </div>
 
-            <div class="header__contacts">
-                <span class="header__contacts-icon">
-                    <CallSvg />
-                </span>
-                
-                <span class="header__contacts-title">
-                    Контакты:
-                </span>
+            <!--mobile toggle-->
+            <div 
+                class="header__mobile-toggle"
+                :class="{ 'header__mobile-toggle__active': menuToggle }"
+            >
+                <div class="header__mobile-toggle__logo">
+                    <Logo />
+                    <Closed
+                        @click="menuToggle = !menuToggle"
+                    />
+                </div>
 
-                <span class="header__contacts-value">
-                    <router-link to="+7 (917) 510-57-59">
-                        +7 (917) 510-57-59
-                    </router-link>
-                </span>
+                <div class="header__mobile-toggle__list">
+                    <MenuList />
+                </div>    
             </div>
-
-            <div class="header__cart">
-                <HeaderCart />
-            </div>
-        </div>    
-    </div>
-    <LeftMenu 
-        v-bind="{ isShowLeftMenu }"
-    />
+        </div>
+    </header>
 </template>
 <script>
 
-import MenuBurger from '@/components/widgets/menuBurger/index.vue'
-import HeaderCart from '@/components/widgets/headerCart/index.vue'
-import HeaderSearch from '@/components/widgets/search/index.vue'
-import LeftMenu from '@/components/widgets/leftMenu/index.vue'
-
-import CallSvg from '@/assets/svg/calling.svg?component'
+import Closed from '@/components/widgets/closed/index.vue'
+import Burger from '@/components/widgets/burger/index.vue'
+import MenuList from '@/components/widgets/menuList/index.vue'
+import Logo from '@/components/widgets/logo/index.vue'
 
 import { ref } from 'vue'
 
 export default {
     name: "Header",
     components: {
-        MenuBurger,
-        HeaderCart,
-        HeaderSearch,
-        LeftMenu,
-        CallSvg
+        Burger,
+        MenuList,
+        Logo,
+        Closed
     },
 
     setup () {
-        const isShowLeftMenu = ref(false)
+        const menuToggle = ref(false)
 
         return {
-            isShowLeftMenu
+            menuToggle 
         }
     }
 }

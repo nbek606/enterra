@@ -7,9 +7,12 @@ $screen-lg: 991px;
 $screen-xl: 1200px;
 $screen-2xl: 1440px;
 $screen-3xl: 1650px;
-$baseGreen: #65906C;
-$ligthGreen: #72A479;
-$bgColor: #403C3B;
+
+$white: #fff;
+$green:#63AB41;
+$ligthGreen:#87CE66;
+$black: #2E2E2E;
+$greenGradient: linear-gradient(135.92deg, $ligthGreen 6.99%, $green 96.73%);
 
 /**
 
