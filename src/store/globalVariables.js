@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
 
-export const useGlobalVariablesStore = defineStore('test', () => {
-    const logoText = 'Крым'
+export const useGlobalVariablesStore = defineStore('globalVariables', () => {
+    const formErrorMsg = ''
+
     
     return {
        logoText

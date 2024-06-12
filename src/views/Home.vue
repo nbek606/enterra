@@ -1,16 +1,8 @@
+<script setup>
+    import HomeContent from '@/components/homeContent/index.vue'
+</script>
 <template lang="">
-    <div class="home">
-        <Banner />
+    <div class="container">
+        <HomeContent  />
     </div>
 </template>
-<script>
-
-import Banner from '../components/blocks/banner/index.vue'
-
-export default {
-    name: "Home",
-    components: {
-        Banner
-    }
-}
-</script>

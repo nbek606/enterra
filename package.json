@@ -10,10 +10,14 @@
     "test": "vitest --dom"
   },
   "dependencies": {
-    "@splidejs/vue-splide": "^0.6.12",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
     "pinia": "^2.1.7",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.2"
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
+    "vue3-cookies": "^1.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
@@ -23,7 +27,9 @@
     "sass": "^1.76.0",
     "sass-loader": "^14.2.1",
     "vite": "^5.2.0",
+    "vite-plugin-vuetify": "^2.0.3",
     "vite-svg-loader": "^5.1.0",
-    "vitest": "^1.6.0"
+    "vitest": "^1.6.0",
+    "vuetify": "^3.6.8"
   }
 }
