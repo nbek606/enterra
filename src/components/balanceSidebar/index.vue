@@ -11,7 +11,6 @@
 
     balanceInterval = setInterval(async () => {
         await getBalance()
-        console.log(Date.now())
     }, 30000)
   })
 
